@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
 
 namespace NotSoTotalCommander
 {
@@ -23,6 +24,15 @@ namespace NotSoTotalCommander
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            foreach(var drive in Directory.GetLogicalDrives())
+            {
+                var item = new TreeViewItem();
+                WidokFolderow.Items.Add(item);
+            }
         }
     }
 }
