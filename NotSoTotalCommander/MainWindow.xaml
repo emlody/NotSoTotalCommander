@@ -16,7 +16,7 @@
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal">
                                     <Image Width="20" Height="20" Margin="3" Source="images/dysk-ikona.png"/>
-                                    <TextBlock VerticalAlignment="Center" Text="Ikona dysku"></TextBlock>
+                                    <TextBlock VerticalAlignment="Center" Text="{Binding}"></TextBlock>
                                 </StackPanel>
                             </DataTemplate>
                         </Setter.Value>
